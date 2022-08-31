@@ -1,0 +1,1 @@
+Ao começar a converter os projetos do curso Curso 50 Projects In 50 Days de HTML, CSS e JavaScript para React percebi a dificuldade em alguns conceitos do React, por isso inicio este curso para dominar o React.
