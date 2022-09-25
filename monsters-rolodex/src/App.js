@@ -7,27 +7,30 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      name: 'Yihua',
+      monsters: [
+        {
+          name: 'Linda'
+        },
+        {
+          name: 'Frank'
+        },
+        {
+          name: 'Jacky'
+        },
+        {
+          name: 'Andrei'
+        }
+      ]
     }
   }
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Olá, {this.state.name}</p>
-          <button
-            onClick={() => {
-              if (this.state.name === 'Yihua') {
-                this.setState({ name: 'Andrei' })
-              } else {
-                this.setState({ name: 'Yihua' })
-              }
-            }}
-          >
-            Change Name
-          </button>
-        </header>
+        {
+          this.state.monsters.map((monster) => {
+            return <h1>{monster.name}</h1>
+          })
+        }
       </div>
     )
   }
