@@ -5,7 +5,6 @@ import './App.css'
 
 class App extends Component {
   constructor() {
-    console.log('constructor')
     super()
     this.state = {
       monsters: [],
@@ -13,16 +12,12 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    console.log('componentDidMount')
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((users) =>
         this.setState(
           () => {
             return { monsters: users }
-          },
-          () => {
-            console.log(this.state)
           }
         )
       )
@@ -36,7 +31,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('render')
 
     const { monsters, searchField } = this.state
     const { onSearchChange } = this
@@ -60,7 +54,7 @@ class App extends Component {
             </div>
           )
         })} */}
-        <CardList />
+        <CardList monsters={filteredMonsters} />
       </div>
     )
   }
