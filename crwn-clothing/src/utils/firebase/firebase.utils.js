@@ -2,13 +2,13 @@ import { initializeApp } from 'firebase/app'
 import { getAuth, signInWithRedirect, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-    authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-    projectId: 'crwn-clothing-db-98d4d',
-    storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-    messagingSenderId: '626766232035',
-    appId: '1:626766232035:web:506621582dab103a4d08d6',
-}
+    apiKey: "AIzaSyDcUYmZYghTBA7Sp4Bd-v56Vs9ePr8vawQ",
+    authDomain: "crwn-clothing-db-ca40c.firebaseapp.com",
+    projectId: "crwn-clothing-db-ca40c",
+    storageBucket: "crwn-clothing-db-ca40c.appspot.com",
+    messagingSenderId: "1012124737535",
+    appId: "1:1012124737535:web:8efd5047c50a7dd97551ca"
+  };
   
 const firebaseApp = initializeApp(firebaseConfig)
 
@@ -18,3 +18,4 @@ provider.setCustomParameters({
 })
 
 export const auth = getAuth()
+export const signInWithGooglePopup = () => signInWithPopup(auth, provider)
